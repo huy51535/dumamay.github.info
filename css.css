@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #000; /* Tạo đường ngang màu đen */
+    margin: 20px 0;
+}
+
+body {
+    margin: 0;
+}
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem 1rem;
+    padding: 0 1.5rem;
+    border-top: 4px solid white;
+}
+
+.video-section:first-child {
+    border-top: none;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail {
+    position: relative;
+    display: block;
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    right: 5px;
+    bottom: 5px;
+    padding: 0.1cm 0.3cm;
+    border-radius: 0.3cm;
+    font-size: 0.9rem; 
+}
+
+.thumbnail-image {
+    width: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    background-color: white;
+}
+
+.video-bottom-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0.5rem; 
+}
+
+.channel-icon {
+    margin-right: 0.5rem; 
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1; /
+}
+
+.video-title {
+    font-size: 0.9rem; /* Giảm kích thước chữ tiêu đề */
+    font-weight: bold;
+    margin-bottom: 0.1rem; /* Giảm khoảng cách bên dưới */
+    text-decoration: none;
+    color: black;
+}
+
+.video-channel-name {
+    font-size: 0.8rem; 
+    margin-bottom: 0.1rem; 
+    text-decoration: none;
+    color: #555;
+    transition: color 150ms;
+}
+
+.video-channel-name:hover {
+    color: rgb(44, 0, 240);
+}
+
+.video-metadata {
+    font-size: 0.7rem; 
+    color: #555;
+    margin-top: 0.1rem; 
+}
+
+.video-section-title{
+    grid-column: 1/ -1;
+    margin: -0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.video-section-title-close{
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.videos{
+    background-color: white;
+}
+
+.catagories{
+    padding: 1rem 2rem;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.catagory-section{
+    display: flex;
+    overflow: hidden;
+}
+
+.catagory{
+    margin-right: 1rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border: 1px solid white;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color 150ms;
+}
+
+.catagory:hover{
+    background-color: white;
+}
+
+.catagory.active{
+    background-color: blue;
+    color: white;
+    border-color: #eee;
+}
+
+.catagory:last-child{
+    margin-right: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.youtube-logo{
+    height: 20px;
+}
+
+.search-bar{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
+}
+
+.search-input{
+    width: 100%;
+    font-size: inherit;
+    padding: .4em;
+    border: 1px solid #777;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-btn{
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: 1px solid #777;
+    background-color: white;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+ background-color: white;
+}
+
+.menu-icon{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-channel-icon{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #aaa;
+}
+
